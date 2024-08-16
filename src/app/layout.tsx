@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { type ReactNode } from 'react';
+import { Providers } from './providers'
 
 export const metadata = {
   title: 'My Next.js App with Chakra UI',
@@ -10,9 +10,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
       <html lang="en">
       <body>
-      <ChakraProvider>
-        {children}
-      </ChakraProvider>
+        <Providers>
+          {children}
+        </Providers>
       </body>
       </html>
   );
